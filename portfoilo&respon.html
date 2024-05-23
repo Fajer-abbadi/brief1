@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PROJECT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c6d489948b.js" crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            min-height: 100vh;
+            width: 100vw;
+            min: width 100%;
+            position: relative;
+            background-color: lavenderblush;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .box {
+            height: 80vh;
+            width: 100%;
+            padding: 1%;
+            border: 5px solid white;
+            background-color: rgb(214, 186, 195);
+            display: flex;
+            flex-direction: column;
+            border-radius: 3%;
+            box-shadow: -15px 17px 17px rgb(160, 113, 113);
+        }
+
+        .bove {
+            position: relative;
+            background-color: lavenderblush;
+            padding: 2%;
+        }
+
+        .profileText {
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding-bottom: 1%;
+            border-bottom: 1px solid rgb(219, 180, 180);
+        }
+
+        .About {
+            margin-bottom: 20%;
+            font-family: sans-serif;
+            font-size: large;
+        }
+
+        .section {
+            overflow: auto;
+            scroll-behavior: smooth;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2%;
+        }
+
+        .project-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .project-image {
+            width: 30%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-image:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes iconTransition {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            animation: iconTransition 0.5s ease-in-out;
+        }
+
+        .language-proficiency input[type="range"] {
+            background-color: #c8a3c0;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                height: auto;
+            }
+
+            .profileText {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-image {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profileText {
+                text-align: center;
+            }
+
+            .project-image {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="font-family:monospace;"><i class="fa-solid fa-heart"
+                            style="color: #dfb3cd;"></i> <span style="color:#6b6668 ;">Fajer</span><span
+                            style="color:#dea2b7; text-transform: lowercase;"> AL-abbadi</span> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#MyProjects">My projects</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-expanded="false">Social Media</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://www.linkedin.com/feed/"
+                                            target="_blank"><i class="fab fa-linkedin" style="color: #f0adc3;"></i>
+                                            LinkedIn</a></li>
+                                    <li><a class="dropdown-item" href="https://github.com/Fajer-abbadi"
+                                            target="_blank"><i class="fab fa-github" style="color: #f5a8c3;"></i>
+                                            GitHub</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://www.facebook.com/fajerb.salaheen?mibextid=LQQJ4d"
+                                            target="_blank"><i class="fab fa-facebook" style="color: #eabde8;"></i>
+                                            Facebook</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://www.instagram.com/fajer_alabbadi?igsh=NnZ2aG9zcHQzOXZm&utm_source=qr"
+                                            target="_blank"><i class="fab fa-instagram" style="color: #f7c5d6;"></i>
+                                            Instagram</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Contact">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="bove">
+                <div class="profileText">
+                    <div class="img bx">
+                        <img src="WhatsApp Image 2024-05-19 at 11.06.27 PM.jpeg" width="80%" height="80% "
+                            style="border-radius: 50%;float:right;">
+                    </div>
+
+                    <br>
+                    <div id="about">
+                        <h2 style="margin-left: 2%; font-family:monospace;">About me</h2><br>
+                        <p style="padding-left: 5%;">My name is Fajer Al-Abadi, and I was born in 1998. I earned a
+                            Bachelor's degree in
+                            Mathematics
+                            from Philadelphia University, where I studied from 2018 to 2021. Following my passion for
+                            education, I obtained a Master's degree in Curriculum and Instruction, which I completed in
+                            2023
+                            at Amman Arab University. Recently, I decided to shift my career path towards programming,
+                            aiming to become a skilled programmer. I am excited to integrate my strong analytical
+                            background
+                            with my new coding skills to contribute effectively to the tech industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <section id="Experiences">
+                <h2 style="font-family:monospace"><i class="fas fa-medal" style="color: #d9bfd5;"></i> Experience</h2>
+                <p>
+                    I started my training at Orange Coding Academy in May. During this time, I have been learning
+                    various aspects of programming and web development. The academy provides a comprehensive curriculum
+                    and hands-on projects that have significantly improved my technical skills and knowledge.
+                </p>
+            </section>
+            <section id="Education">
+                <h2 style="font-family:monospace"><i class="fas fa-user-graduate" style="color: #c8a3c0;"></i> Education
+                </h2>
+                <ul>
+                    <li>Bachelor's degree in Mathematics from Philadelphia University (2018-2021)</li>
+                    <li>Master's degree in Curriculum and Instruction from Amman Arab University (2022-2023)</li>
+                </ul>
+            </section>
+
+            <section id="Language">
+                <h2 style="font-family:monospace"><i class="fas fa-language" style="color: #c8a3c0;"></i> Language
+                    Proficiency</h2>
+                <div class="language-proficiency">
+                    <label for="arabicRange">Arabic Proficiency:</label>
+                    <input type="range" class="slider" id="arabicRange" value="100" disabled min="0" max="100">
+                </div>
+                <div class="language-proficiency">
+                    <label for="englishRange">English Proficiency:</label>
+                    <input type="range" class="slider" id="englishRange" value="50" disabled min="0" max="100">
+                </div>
+            </section>
+        </div>
+
+        <div class="box">
+            <section id="Skills">
+                <h2 style="font-family:monospace"><i class="fas fa-cogs" style="color: #c8a3c0;"></i> Skills</h2>
+                <ul>
+                    <li>Problem-Solving</li>
+                    <li>Communication</li>
+                    <li>Web Development full stack</li>
+                    <li>Git & GitHub</li>
+                    <li>Time Management</li>
+                </ul>
+            </section>
+
+            <section id="Interests">
+                <h2 style="font-family:monospace"><i class="fas fa-heart" style="color: #c8a3c0;"></i> Interests</h2>
+                <ul>
+                    <li>Reading</li>
+                    <li>Traveling</li>
+                    <li>Language Learning</li>
+                    <li>Cooking</li>
+                    <li>Learning Programming</li>
+                </ul>
+            </section>
+
+            <section id="MyProjects">
+                <h2 style="font-family:monospace"><i class="fas fa-project-diagram" style="color: #c8a3c0;"></i> My
+                    Projects</h2>
+                <div class="project-images">
+                    <img src="Screenshot_22-5-2024_113643_.jpeg" alt="Project 1" class="project-image">
+                    <img src="Screenshot_22-5-2024_113853_.jpeg" alt="Project 2" class="project-image">
+                    <img src="Screenshot_22-5-2024_113945_.jpeg" alt="Project 3" class="project-image">
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <footer>
+        <section id="Contact" style="text-align: center;">
+            <h2>Contact Me</h2>
+            <p> <i class="fas fa-envelope icon" style="color: #c8a3c0;"></i> Email: fajeralabbadi98@gmail.com</p>
+            <p><i class="fas fa-phone icon" style="color: #c8a3c0;"></i> Phone: 0798109947 </p>
+
+        </section>
+    </footer>
+</body>
+
+</html>
