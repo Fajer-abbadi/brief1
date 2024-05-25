@@ -3,43 +3,63 @@
 
 <head>
     <title>PROJECT</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c6d489948b.js" crossorigin="anonymous"></script>
 
     <style>
+        
         .container {
             min-height: 100vh;
             width: 100vw;
             min: width 100%;
-            position: relative;
             background-color: lavenderblush;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
+        }
+        body{margin: 0;padding: 0;background-color: lavenderblush;}
+        .container2 {
+            min-height: 100vh;
+            width: 100vw;
+            min: width 100%;
+            background-color: lavenderblush;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
         }
 
         .box {
             height: 80vh;
             width: 100%;
-            padding: 1%;
+            padding: 0%;
             border: 5px solid white;
-            background-color: rgb(214, 186, 195);
+            background-color: rgb(229, 219, 222);
             display: flex;
             flex-direction: column;
             border-radius: 3%;
             box-shadow: -15px 17px 17px rgb(160, 113, 113);
         }
-
+        .box2 {
+            height: 100vh;
+            width: 100%;
+            padding: 0%;
+            border: 5px solid white;
+            background-color: rgb(229, 219, 222);
+            display: flex;
+            flex-direction: column;
+            border-radius: 3%;
+            box-shadow: -15px 17px 17px rgb(160, 113, 113);
+        }
         .bove {
-            position: relative;
             background-color: lavenderblush;
             padding: 2%;
         }
 
         .profileText {
-            position: relative;
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
@@ -57,14 +77,16 @@
             overflow: auto;
             scroll-behavior: smooth;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2%;
+            grid-template-columns: 1fr 1fr ;
+            gap: 8%;
+            height: 100vh;
+            
         }
-
+    
         .project-images {
             display: flex;
             justify-content: space-around;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .project-image {
@@ -96,11 +118,12 @@
             background-color: #c8a3c0;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
+            .container2{flex-direction: column;}
             .box {
                 height: auto;
             }
-
+.box2{height: auto;}
             .profileText {
                 flex-direction: column;
                 text-align: center;
@@ -116,20 +139,12 @@
                 margin-bottom: 10px;
             }
 
-            .section {
-                grid-template-columns: 1fr;
+            .section {display:flex
+               ;width: 100%;height: 100%;
             }
         }
 
-        @media (max-width: 576px) {
-            .profileText {
-                text-align: center;
-            }
-
-            .project-image {
-                width: 100%;
-            }
-        }
+       
     </style>
 
 </head>
@@ -193,7 +208,7 @@
 
                     <br>
                     <div id="about">
-                        <h2 style="margin-left: 2%; font-family:monospace;">About me</h2><br>
+                        <h3 style="margin-left: 2%; font-family:monospace;">About me</h3><br>
                         <p style="padding-left: 5%;">My name is Fajer Al-Abadi, and I was born in 1998. I earned a
                             Bachelor's degree in
                             Mathematics
@@ -209,19 +224,17 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="box">
-            <section id="Experiences">
-                <h2 style="font-family:monospace"><i class="fas fa-medal" style="color: #d9bfd5;"></i> Experience</h2>
+    <div class="container2">
+        <div class="box2">
+                <h3 style="font-family:monospace"><i class="fas fa-medal" style="color: #d9bfd5;"></i> Experience</h3>
                 <p>
                     I started my training at Orange Coding Academy in May. During this time, I have been learning
                     various aspects of programming and web development. The academy provides a comprehensive curriculum
                     and hands-on projects that have significantly improved my technical skills and knowledge.
                 </p>
-            </section>
             <section id="Education">
-                <h2 style="font-family:monospace"><i class="fas fa-user-graduate" style="color: #c8a3c0;"></i> Education
-                </h2>
+                <h3 style="font-family:monospace"><i class="fas fa-user-graduate" style="color: #c8a3c0;"></i> Education
+                </h3>
                 <ul>
                     <li>Bachelor's degree in Mathematics from Philadelphia University (2018-2021)</li>
                     <li>Master's degree in Curriculum and Instruction from Amman Arab University (2022-2023)</li>
@@ -229,8 +242,8 @@
             </section>
 
             <section id="Language">
-                <h2 style="font-family:monospace"><i class="fas fa-language" style="color: #c8a3c0;"></i> Language
-                    Proficiency</h2>
+                <h3 style="font-family:monospace"><i class="fas fa-language" style="color: #c8a3c0;"></i> Language
+                    Proficiency</h3>
                 <div class="language-proficiency">
                     <label for="arabicRange">Arabic Proficiency:</label>
                     <input type="range" class="slider" id="arabicRange" value="100" disabled min="0" max="100">
@@ -242,32 +255,28 @@
             </section>
         </div>
 
-        <div class="box">
+        <div class="box2">
             <section id="Skills">
-                <h2 style="font-family:monospace"><i class="fas fa-cogs" style="color: #c8a3c0;"></i> Skills</h2>
+                <h3 style="font-family:monospace"><i class="fas fa-cogs" style="color: #c8a3c0;"></i> Skills</h3>
                 <ul>
-                    <li>Problem-Solving</li>
-                    <li>Communication</li>
-                    <li>Web Development full stack</li>
+                    <li>html&css</li>
+                    <li>php</li>
                     <li>Git & GitHub</li>
-                    <li>Time Management</li>
+                    <li>javascript</li>
                 </ul>
             </section>
 
             <section id="Interests">
-                <h2 style="font-family:monospace"><i class="fas fa-heart" style="color: #c8a3c0;"></i> Interests</h2>
+                <h3 style="font-family:monospace"><i class="fas fa-heart" style="color: #c8a3c0;"></i> Interests</h3>
                 <ul>
-                    <li>Reading</li>
-                    <li>Traveling</li>
-                    <li>Language Learning</li>
-                    <li>Cooking</li>
-                    <li>Learning Programming</li>
+                    <li>Language </li>
+                    <li>Programming</li>
                 </ul>
             </section>
 
             <section id="MyProjects">
-                <h2 style="font-family:monospace"><i class="fas fa-project-diagram" style="color: #c8a3c0;"></i> My
-                    Projects</h2>
+                <h3 style="font-family:monospace"><i class="fas fa-project-diagram" style="color: #c8a3c0;"></i> My
+                    Projects</h3>
                 <div class="project-images">
                     <img src="Screenshot_22-5-2024_113643_.jpeg" alt="Project 1" class="project-image">
                     <img src="Screenshot_22-5-2024_113853_.jpeg" alt="Project 2" class="project-image">
@@ -279,8 +288,8 @@
 
 
     <footer>
-        <section id="Contact" style="text-align: center;">
-            <h2>Contact Me</h2>
+        <section id="Contact" style="text-align: center; background-color:rgb(229, 219, 222); box-shadow:rgb(160, 113, 113)  10px 10px 15px;">
+            <h3>Contact Me</h3>
             <p> <i class="fas fa-envelope icon" style="color: #c8a3c0;"></i> Email: fajeralabbadi98@gmail.com</p>
             <p><i class="fas fa-phone icon" style="color: #c8a3c0;"></i> Phone: 0798109947 </p>
 
